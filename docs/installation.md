@@ -9,8 +9,11 @@
 ## Composer
 
 ```bash
-composer require closepact/rot-rut-xml
+composer config repositories.rot-rut-xml vcs https://github.com/ClosePact/rot-rut-xml
+composer require closepact/rot-rut-xml:^0.3
 ```
+
+The package is not on Packagist yet. Until it is, the `composer config` line tells Composer to install it from the GitHub repository. Once it is on Packagist, `composer require closepact/rot-rut-xml` alone is enough, and the repository entry can be removed from `composer.json`.
 
 ## Skatteverket's schemas
 

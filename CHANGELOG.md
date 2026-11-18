@@ -6,7 +6,7 @@ All notable changes are listed here. The package follows [semantic versioning](h
 
 Nothing yet.
 
-## [0.3.0] – not yet tagged
+## [0.3.0] – 2026-11-18
 
 First version: validation, generator and CLI.
 

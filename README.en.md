@@ -43,9 +43,12 @@ Versions 3 and 4 are still accepted by Skatteverket but are being phased out. Th
 Requires PHP 8.3+ with `dom` and `libxml`.
 
 ```bash
-composer require closepact/rot-rut-xml
+composer config repositories.rot-rut-xml vcs https://github.com/ClosePact/rot-rut-xml
+composer require closepact/rot-rut-xml:^0.3
 vendor/bin/rot-rut schemas:fetch
 ```
+
+The package is not on Packagist yet. Until it is, Composer installs it straight from GitHub (the `composer config` line).
 
 `schemas:fetch` downloads Skatteverket's XSD files over HTTPS. A file is kept only when its sha256 matches the [manifest](resources/schemas/manifest.json). The schemas are not bundled because Skatteverket states no redistribution terms. See [installation](docs/installation.md).
 
