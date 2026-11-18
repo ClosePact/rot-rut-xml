@@ -9,6 +9,8 @@ require __DIR__.'/../../vendor/autoload.php';
 use Closepact\RotRutXml\ValidationOptions;
 use Closepact\RotRutXml\Validator;
 
+$argv = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? array_values(array_map('strval', $_SERVER['argv'])) : [];
+
 [$script, $file, $asOf] = $argv + [1 => null, 2 => null];
 if ($file === null) {
     fwrite(STDERR, "usage: php {$script} <file.xml> [YYYY-MM-DD]\n");

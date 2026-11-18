@@ -10,6 +10,8 @@ foreach ([__DIR__.'/../vendor/autoload.php', __DIR__.'/../../../autoload.php'] a
     }
 }
 
+$argv = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? array_values(array_map('strval', $_SERVER['argv'])) : [];
+
 if (! class_exists(Closepact\RotRutXml\Cli\Application::class)) {
     fwrite(STDERR, "Run `composer install` first.\n");
     exit(4);

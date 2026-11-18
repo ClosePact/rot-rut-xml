@@ -12,6 +12,8 @@ use Closepact\RotRutXml\ValidationOptions;
 use Closepact\RotRutXml\Validator;
 use Closepact\RotRutXml\Version\SchemaVersion;
 
+$argv = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? array_values(array_map('strval', $_SERVER['argv'])) : [];
+
 [$script, $input, $version, $asOf] = $argv + [1 => null, 2 => 'v1.1', 3 => null];
 if ($input === null || SchemaVersion::fromOption((string) $version) === null) {
     fwrite(STDERR, "usage: php {$script} <input.json> v6|v1.0|v1.1 [YYYY-MM-DD]\n");
