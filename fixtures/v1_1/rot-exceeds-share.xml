@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:Begaran xmlns:p="http://xmls.skatteverket.se/se/skatteverket/skattered/begaran/1.1">
+  <p:Systemkontakt>
+    <p:Namn>Exempelbolaget</p:Namn>
+    <p:Produktnamn>Exempelfakturering</p:Produktnamn>
+    <p:KontaktEpost>support@example.com</p:KontaktEpost>
+  </p:Systemkontakt>
+  <p:NamnPaBegaran>Rot december</p:NamnPaBegaran>
+  <p:TypAvBegaran>ROT</p:TypAvBegaran>
+  <p:Utforare>198001042384</p:Utforare>
+  <p:Arende>
+    <p:FakturaNr>2026-1301</p:FakturaNr>
+    <p:Kopare>198001032385</p:Kopare>
+    <p:Fastighet>
+      <p:LagenhetsNr>1102</p:LagenhetsNr>
+      <p:BrfOrgNr>167999000040</p:BrfOrgNr>
+    </p:Fastighet>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>MALNING_TAPETSERING</p:TypAvUtfortArbete>
+      <p:AntalTimmar>16</p:AntalTimmar>
+      <p:Kostnad>2400</p:Kostnad>
+    </p:UtfortArbete>
+    <p:OvrigKostnad>500</p:OvrigKostnad>
+    <p:Betalningsdatum>2026-12-03</p:Betalningsdatum>
+    <p:Arbetskostnad>10500</p:Arbetskostnad>
+    <p:BetaltBelopp>7000</p:BetaltBelopp>
+    <p:BegartBelopp>3001</p:BegartBelopp>
+    <p:Underentreprenor>false</p:Underentreprenor>
+    <p:Bemanningsforetag>false</p:Bemanningsforetag>
+  </p:Arende>
+  <p:Arende>
+    <p:FakturaNr>2026-1302</p:FakturaNr>
+    <p:Kopare>195601132334</p:Kopare>
+    <p:Fastighet>
+      <p:Fastighetsbeteckning>EXEMPEL 1:23</p:Fastighetsbeteckning>
+    </p:Fastighet>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>VVS</p:TypAvUtfortArbete>
+      <p:AntalTimmar>6</p:AntalTimmar>
+      <p:Kostnad>1800</p:Kostnad>
+    </p:UtfortArbete>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>EL</p:TypAvUtfortArbete>
+      <p:AntalTimmar>2</p:AntalTimmar>
+      <p:Kostnad>350</p:Kostnad>
+    </p:UtfortArbete>
+    <p:OvrigKostnad>0</p:OvrigKostnad>
+    <p:Betalningsdatum>2026-12-18</p:Betalningsdatum>
+    <p:Arbetskostnad>7000</p:Arbetskostnad>
+    <p:BetaltBelopp>4900</p:BetaltBelopp>
+    <p:BegartBelopp>2100</p:BegartBelopp>
+    <p:Underentreprenor>true</p:Underentreprenor>
+    <p:Bemanningsforetag>true</p:Bemanningsforetag>
+  </p:Arende>
+</p:Begaran>

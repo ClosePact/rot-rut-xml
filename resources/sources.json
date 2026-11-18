@@ -1,0 +1,104 @@
+{
+    "retrieved": "2026-11-18",
+    "note": "Primary sources for every rule in this toolkit. 'retrieved' is the day the text was read; re-read on every rule review (docs/maintenance.md).",
+    "sources": {
+        "skv-schema-page": {
+            "publisher": "Skatteverket",
+            "title": "Schemalager (XML) – Rot och rut (företag): scheman och exempelfiler",
+            "url": "https://www.skatteverket.se/foretag/etjansterochblanketter/allaetjanster/schemalagerxml/rotochrutforetag.4.71004e4c133e23bf6db800063583.html",
+            "retrieved": "2026-11-18",
+            "covers": "Supported XML versions (1.1, 1.0, 6; 3 and 4 still work but will be phased out), 1.1 usable from 2027-01-01, older versions need the new answers entered manually in the e-service, V1.0 must contain the company's organisation number, ROT and RUT cannot be mixed in one file."
+        },
+        "skv-import-rules": {
+            "publisher": "Skatteverket",
+            "title": "Regler för att importera fil till Rot och rut – företag",
+            "url": "https://www.skatteverket.se/foretag/etjansterochblanketter/allaetjanster/schemalagerxml/rotochrutforetag/reglerforattimporterafiltillrotochrut.4.76a43be412206334b89800033198.html",
+            "retrieved": "2026-11-18",
+            "covers": "Checks made in the e-service after import (buyer number formally correct, buyer not the performer, buyer at least 18 in the payment year, payment date not after the application date, requested within the deduction limit, requested ≤ paid, requested + paid ≤ labour cost, one payment year per file, housing cooperative number formally correct, hours and material for at least one work area) and checks made by the schema (numeric personnummer, payment date after 2009-06-30, at least one buyer, at most 100 buyers); fixed-price work states the actual hours."
+        },
+        "skv-xsd-v6": {
+            "publisher": "Skatteverket",
+            "title": "Begaran.xsd and BegaranCOMPONENT.xsd, XML version 6",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/ht/komponent/V6/BegaranCOMPONENT.xsd",
+            "retrieved": "2026-11-18",
+            "covers": "V6 structure, field formats, element documentation (e.g. Ovrigkostnad 'Ska fyllas i om timmar eller material angetts för någon tjänst i utfört arbete')."
+        },
+        "skv-xsd-v1-0": {
+            "publisher": "Skatteverket",
+            "title": "Begaran.xsd, XML version 1.0 (skattered/begaran V1)",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1/Begaran.xsd",
+            "retrieved": "2026-11-18",
+            "covers": "1.0 structure; 2025-08-26 note that ROT and RUT are allowed and validated outside the schema, and that the ROT/RUT e-service does not accept GRON_TEKNIK; valid service codes in the documentation of TypAvUtfortArbete."
+        },
+        "skv-xsd-v1-1": {
+            "publisher": "Skatteverket",
+            "title": "Begaran.xsd, XML version 1.1 (skattered/begaran V1.1)",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1.1/Begaran.xsd",
+            "retrieved": "2026-11-18",
+            "covers": "1.1 structure (Underentreprenor, Bemanningsforetag mandatory true/false; Systemkontakt optional; no xsi:nil), effectiveFrom 2027-01-01, modified 2026-11-09, service codes, flat-rate services without hours or cost, Fastighet only for ROT (and green technology), Arbetskostnad only for ROT and RUT."
+        },
+        "sfs-2009-194": {
+            "publisher": "Riksdagen (Svensk författningssamling)",
+            "title": "Lag (2009:194) om förfarandet vid skattereduktion för hushållsarbete, consolidated up to SFS 2025:324",
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2009194-om-forfarandet-vid-skattereduktion_sfs-2009-194/",
+            "retrieved": "2026-11-18",
+            "covers": "5 § whole kronor; 7 § payment at most the difference between charged incl. VAT and paid, at most the paid amount (67 kap. 13 § IL) or three sevenths of it (other work), 75 000 kr / 50 000 kr per year; 8 § filed electronically, received by 31 January the year after payment; 9 § content (buyer's personnummer or samordningsnummer, amounts, payment day, hours except 67 kap. 13 § 12–13 IL); 9 a § property designation, apartment and housing cooperative number for ROT."
+        },
+        "sfs-1999-1229": {
+            "publisher": "Riksdagen (Svensk författningssamling)",
+            "title": "Inkomstskattelag (1999:1229), 67 kap. 11–19 §§ (skattereduktion för hushållsarbete)",
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/inkomstskattelag-19991229_sfs-1999-1229/",
+            "retrieved": "2026-11-18",
+            "covers": "13 § household services (12: laundry at a laundry facility, 13: transport to resale), 13 a–13 b §§ ROT, 15 § the person doing the work cannot be the buyer, 19 § 50 / 30 percent, 75 000 kr and 50 000 kr per year (Lag 2025:322)."
+        },
+        "riksdagen-sku3": {
+            "publisher": "Riksdagen",
+            "title": "Betänkande 2026/27:SkU3 Effektivare kontrollmöjligheter i systemen för rot, rut, grön teknik och personalliggare",
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/betankande/effektivare-kontrollmojligheter-i-systemen-for-rot_he01sku3/",
+            "retrieved": "2026-11-18",
+            "covers": "Decided 2026-11-11: a payment request is given 'på heder och samvete' and states whether subcontractors or staffing companies were used; the changes apply from 2027-01-01. The amending SFS number was not yet in the consolidated text on 2026-11-18."
+        },
+        "prop-2025-26-282": {
+            "publisher": "Regeringen",
+            "title": "Prop. 2025/26:282 Effektivare kontrollmöjligheter i systemen för rot, rut, grön teknik och personalliggare",
+            "url": "https://www.regeringen.se/rattsliga-dokument/proposition/2026/06/prop.-202526282",
+            "retrieved": "2026-11-18",
+            "covers": "The bill XML version 1.1 was made for (as linked from Skatteverket's schema page)."
+        },
+        "skv-704": {
+            "publisher": "Skatteverket",
+            "title": "SKV 704 utgåva 8 (september 2007), Personnummer – check digit by the modulus-10 method with weights 1 and 2",
+            "url": "https://docs.swedenconnect.se/technical-framework/mirror/skv/skv704-8.pdf",
+            "retrieved": "2026-11-18",
+            "covers": "Check digit method for personnummer and samordningsnummer. This is a mirror kept by Sweden Connect; Skatteverket's own copy of this edition was not found on skatteverket.se (VERIFY_REQUIRED: current edition)."
+        },
+        "skv-personnummer": {
+            "publisher": "Skatteverket",
+            "title": "Personnummer och samordningsnummer",
+            "url": "https://www.skatteverket.se/privat/folkbokforing/personnummerochsamordningsnummer.4.3810a01c150939e893f18c29.html",
+            "retrieved": "2026-11-18",
+            "covers": "Structure of the personnummer; the hyphen becomes a plus sign the year a person turns 100; the last digit is a check digit."
+        },
+        "skv-pisa-faltlista": {
+            "publisher": "Skatteverket",
+            "title": "Fält i XML – för flyttkontrolluppgift och åtaganden – Version 2",
+            "url": "https://www.skatteverket.se/download/18.7eada0316ed67d728240c9/1708607929567/Pisa_faltlista_v2_0.pdf",
+            "retrieved": "2026-11-18",
+            "covers": "Organisationsnummer: ten digits, third digit at least 2, last digit a check digit; written with the fictitious century digits 16 it has twelve digits."
+        },
+        "skv-beslut-json": {
+            "publisher": "Skatteverket",
+            "title": "Beslut.json, JSON schema for the decision export (skattered/begaran V1)",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1/Beslut.json",
+            "retrieved": "2026-11-18",
+            "covers": "Decision export: fakturanummer is a required property, so an invoice number in the request lets decisions be matched back to invoices."
+        },
+        "skv-testpersonnummer": {
+            "publisher": "Skatteverket (öppna data, CC0 1.0)",
+            "title": "Testpersonnummer and Testsamordningsnummer",
+            "url": "https://skatteverket.entryscape.net/rowstore/dataset/b4de7df7-63c0-4e7e-bb59-1f156a591763",
+            "retrieved": "2026-11-18",
+            "covers": "Fictitious numbers for test environments ('får bara användas i testmiljöer'); the only identity numbers used in this repository's fixtures and tests. Samordningsnummer: https://skatteverket.entryscape.net/rowstore/dataset/9f29fe09-4dbc-4d2f-848f-7cffdd075383"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+name: Regel saknas eller har ändrats / Rule missing or changed
+description: Skatteverket eller lagen säger något annat än verktyget. / Skatteverket or the law says something else than the toolkit.
+labels: [rules]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Primärkälla (exakt URL) / Primary source (exact URL)
+      description: Skatteverket, riksdagen.se eller schemafilen. Bloggar och forum räcker inte. / Skatteverket, riksdagen.se or the schema file. Blogs and forums are not enough.
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: Citat ur källan / Quote from the source
+    validations:
+      required: true
+  - type: input
+    id: effective
+    attributes:
+      label: Gäller från / Effective from (YYYY-MM-DD)
+  - type: textarea
+    id: change
+    attributes:
+      label: Vad borde verktyget göra? / What should the toolkit do?
+    validations:
+      required: true

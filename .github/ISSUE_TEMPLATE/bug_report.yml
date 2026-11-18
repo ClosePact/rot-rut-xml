@@ -1,0 +1,38 @@
+name: Fel / Bug
+description: Verktyget gör fel med en fil eller indata. / The toolkit gets a file or input wrong.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Klistra aldrig in riktiga personnummer eller kunduppgifter.** Ersätt dem med Skatteverkets testpersonnummer (se docs/regulatory-sources.md) eller ta bort dem.
+        **Never paste real personnummer or customer data.** Replace them with Skatteverket's test numbers or remove them.
+  - type: input
+    id: version
+    attributes:
+      label: rot-rut-xml version (`rot-rut about`)
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: ['V6', '1.0', '1.1']
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Vad hände och vad väntade du dig? / What happened and what did you expect?
+      description: Ta med koden (t.ex. REQUESTED_EXCEEDS_PAID) och kommandot. / Include the code and the command.
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: Minsta fil som visar felet (utan riktiga personuppgifter) / Smallest file that shows it (no real personal data)
+      render: xml
+  - type: textarea
+    id: skatteverket
+    attributes:
+      label: Vad sa Skatteverkets e-tjänst, om du provade? / What did Skatteverket's e-service say, if you tried?

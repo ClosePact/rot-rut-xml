@@ -1,0 +1,43 @@
+{
+    "name": "Rot december",
+    "type": "ROT",
+    "performer": "198001042384",
+    "system_contact": {
+        "name": "Exempelbolaget",
+        "product": "Exempelfakturering",
+        "emails": ["support@example.com"]
+    },
+    "cases": [
+        {
+            "invoice_number": "2026-1301",
+            "buyer": "198001032385",
+            "property": { "apartment_number": "1102", "brf_org_number": "167999000040" },
+            "work": [
+                { "service": "MALNING_TAPETSERING", "hours": 16, "material_cost": 2400 }
+            ],
+            "other_cost": 500,
+            "payment_date": "2026-12-03",
+            "labour_cost": 10000,
+            "paid_amount": 7000,
+            "requested_amount": 3000,
+            "subcontractors": false,
+            "staffing_agency": false
+        },
+        {
+            "invoice_number": "2026-1302",
+            "buyer": "195601132334",
+            "property": { "designation": "EXEMPEL 1:23" },
+            "work": [
+                { "service": "VVS", "hours": 6, "material_cost": 1800 },
+                { "service": "EL", "hours": 2, "material_cost": 350 }
+            ],
+            "other_cost": 0,
+            "payment_date": "2026-12-18",
+            "labour_cost": 7000,
+            "paid_amount": 4900,
+            "requested_amount": 2100,
+            "subcontractors": true,
+            "staffing_agency": true
+        }
+    ]
+}

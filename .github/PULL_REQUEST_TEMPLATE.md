@@ -1,0 +1,4 @@
+- [ ] `composer check` passes with Skatteverket's schemas installed (no skipped tests)
+- [ ] Rule changes: primary source in `resources/sources.json`, `docs/regulatory-sources.md` updated, `php tools/rules-doc.php > docs/rules.md` regenerated
+- [ ] New or changed behaviour has a fixture or test; fixtures use only Skatteverket's test personnummer
+- [ ] CHANGELOG entry

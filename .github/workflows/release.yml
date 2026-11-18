@@ -1,0 +1,51 @@
+name: Release check
+
+# Runs on a version tag. It verifies the tagged code and builds the archive
+# Composer would distribute, and keeps it as a workflow artifact.
+# It publishes nothing: GitHub releases and Packagist are manual steps.
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          extensions: dom, libxml, json, openssl
+          coverage: none
+          tools: composer:v2
+
+      - name: Tag matches Toolkit::VERSION
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          grep -q "VERSION = '${tag}'" src/Toolkit.php || { echo "Toolkit::VERSION does not match tag ${tag}"; exit 1; }
+          grep -q "## \[${tag}\]" CHANGELOG.md || { echo "CHANGELOG.md has no entry for ${tag}"; exit 1; }
+
+      - run: composer validate --strict
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: php bin/rot-rut schemas:fetch --include-samples --schemas="$RUNNER_TEMP/skatteverket"
+      - run: vendor/bin/phpstan analyse --no-progress --memory-limit=512M
+      - run: vendor/bin/phpunit --fail-on-skipped
+        env:
+          ROT_RUT_XML_SCHEMA_DIR: ${{ runner.temp }}/skatteverket
+
+      - name: Build the distribution archive (export-ignore applied)
+        run: git archive --format=zip --prefix=rot-rut-xml/ -o "rot-rut-xml-${GITHUB_REF_NAME}.zip" "${GITHUB_REF_NAME}"
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: rot-rut-xml-${{ github.ref_name }}
+          path: rot-rut-xml-${{ github.ref_name }}.zip
+          retention-days: 30

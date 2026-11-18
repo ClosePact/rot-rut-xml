@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:Begaran xmlns:p="http://xmls.skatteverket.se/se/skatteverket/skattered/begaran/1.1">
+  <p:NamnPaBegaran>Rut december</p:NamnPaBegaran>
+  <p:TypAvBegaran>RUT</p:TypAvBegaran>
+  <p:Utforare>198001042384</p:Utforare>
+  <p:Arende>
+    <p:FakturaNr>2026-1201</p:FakturaNr>
+    <p:Kopare>198001022386</p:Kopare>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>STADNING</p:TypAvUtfortArbete>
+      <p:AntalTimmar>4</p:AntalTimmar>
+      <p:Kostnad>80</p:Kostnad>
+    </p:UtfortArbete>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>TVATT_VID_TVATTINRATTNING</p:TypAvUtfortArbete>
+    </p:UtfortArbete>
+    <p:OvrigKostnad>240</p:OvrigKostnad>
+    <p:Betalningsdatum>2026-12-10</p:Betalningsdatum>
+    <p:Arbetskostnad>2020</p:Arbetskostnad>
+    <p:BetaltBelopp>1010</p:BetaltBelopp>
+    <p:Underentreprenor>false</p:Underentreprenor>
+    <p:Bemanningsforetag>false</p:Bemanningsforetag>
+  </p:Arende>
+  <p:Arende>
+    <p:FakturaNr>2026-1202</p:FakturaNr>
+    <p:Kopare>199001012385</p:Kopare>
+    <p:UtfortArbete>
+      <p:TypAvUtfortArbete>STADNING</p:TypAvUtfortArbete>
+      <p:AntalTimmar>3</p:AntalTimmar>
+      <p:Kostnad>0</p:Kostnad>
+    </p:UtfortArbete>
+    <p:OvrigKostnad>0</p:OvrigKostnad>
+    <p:Betalningsdatum>2026-12-14</p:Betalningsdatum>
+    <p:Arbetskostnad>1500</p:Arbetskostnad>
+    <p:BetaltBelopp>750</p:BetaltBelopp>
+    <p:BegartBelopp>750</p:BegartBelopp>
+    <p:Underentreprenor>true</p:Underentreprenor>
+    <p:Bemanningsforetag>false</p:Bemanningsforetag>
+  </p:Arende>
+</p:Begaran>

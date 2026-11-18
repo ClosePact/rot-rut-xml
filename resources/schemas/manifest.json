@@ -1,0 +1,76 @@
+{
+    "note": "Skatteverket's schema and example files are NOT included in this package: their redistribution terms are not stated (docs/regulatory-sources.md). `rot-rut schemas:fetch` downloads them from Skatteverket and checks every file against the sha256 below. A file whose checksum differs is never used for validation.",
+    "checked": "2026-11-18",
+    "files": [
+        {
+            "path": "ht/begaran/V6/Begaran.xsd",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/ht/begaran/V6/Begaran.xsd",
+            "sha256": "98463ee0e36da685502630b9bad3256b8bde55d405d47827cb9703759ccad5c7",
+            "version": "v6",
+            "kind": "xsd"
+        },
+        {
+            "path": "ht/komponent/V6/BegaranCOMPONENT.xsd",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/ht/komponent/V6/BegaranCOMPONENT.xsd",
+            "sha256": "b49c36926cd95109741316acc6d366f6b1c9803398c5bc18574dd8ee5b319bec",
+            "version": "v6",
+            "kind": "xsd"
+        },
+        {
+            "path": "skattered/begaran/V1/Begaran.xsd",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1/Begaran.xsd",
+            "sha256": "fbc3e66456d070d6fa8077e1d111f3d9c15682f9348c66f80fcd8fd2f662ef1d",
+            "version": "v1.0",
+            "kind": "xsd"
+        },
+        {
+            "path": "skattered/begaran/V1.1/Begaran.xsd",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1.1/Begaran.xsd",
+            "sha256": "91fa3c827738cc4f7ddfb6238e5f5065ab447b73076109f69f8c3de360c388fd",
+            "version": "v1.1",
+            "kind": "xsd"
+        },
+        {
+            "path": "skattered/begaran/exempel_rot_3st.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/exempel_rot_3st.xml",
+            "sha256": "fc96ca50f372fb64120f7c6f76b969f696dc49e5c70b1f9fcd1c462155181c11",
+            "version": "v6",
+            "kind": "sample"
+        },
+        {
+            "path": "skattered/begaran/exempel_rut_3st.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/exempel_rut_3st.xml",
+            "sha256": "b3080d1bae8cfcc18209ac122f5249a576faef9f3a4f90615633116279b44889",
+            "version": "v6",
+            "kind": "sample"
+        },
+        {
+            "path": "skattered/begaran/V1/Rot_V1.0.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1/Rot_V1.0.xml",
+            "sha256": "b11b26684b136aa5025d46fb9da5346d1239223d4cb8d0f26ee7ab3eddc7a179",
+            "version": "v1.0",
+            "kind": "sample"
+        },
+        {
+            "path": "skattered/begaran/V1/Rut_V1.0.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1/Rut_V1.0.xml",
+            "sha256": "e4f63879893f68107f93c093b25da3ba68899391e1460371a05b9bbdbbb7cacb",
+            "version": "v1.0",
+            "kind": "sample"
+        },
+        {
+            "path": "skattered/begaran/V1.1/Rot_V1.1.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1.1/Rot_V1.1.xml",
+            "sha256": "a954bd446fe08bcd352133fad1cf55c1ef2be71185e72392ca426a68f22ad7b4",
+            "version": "v1.1",
+            "kind": "sample"
+        },
+        {
+            "path": "skattered/begaran/V1.1/Rut_V1.1.xml",
+            "url": "https://xmls.skatteverket.se/se/skatteverket/skattered/begaran/V1.1/Rut_V1.1.xml",
+            "sha256": "6fa497e2835852be194906258f8dc4ce217cdc0914450d86ec92336a22759822",
+            "version": "v1.1",
+            "kind": "sample"
+        }
+    ]
+}

@@ -1,0 +1,676 @@
+{
+  "note": "Expected findings per fixture. \"schema\" is the XSD status when the schemas are installed; \"errors_without_schema\" (when present) replaces \"errors\" when they are not.",
+  "cases": [
+    {
+      "id": "v1_1-rut-valid",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "RUT cleaning, two buyers, flat-rate laundry, 2027 answers, filed January 2027 for December 2026 payments"
+    },
+    {
+      "id": "v1_1-rot-valid",
+      "file": "v1_1/rot-brf-and-house-valid.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "ROT: cooperative apartment and a house; Systemkontakt; requested exactly 3/7 of paid"
+    },
+    {
+      "id": "v6-rut-valid",
+      "file": "v6/rut-cleaning-valid.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v6-rot-valid",
+      "file": "v6/rot-brf-and-house-valid.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v1_0-rut-valid",
+      "file": "v1_0/rut-cleaning-valid.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v1_1-before-2027",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2026-12-31",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [
+        "V1_1_NOT_YET_USABLE"
+      ],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v1_1-on-2027-01-01",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2027-01-01",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v6-on-2027-01-01",
+      "file": "v6/rut-cleaning-valid.xml",
+      "as_of": "2027-01-01",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [
+        "DECLARATIONS_IN_E_SERVICE"
+      ],
+      "note": ""
+    },
+    {
+      "id": "v6-2026-12-31",
+      "file": "v6/rut-cleaning-valid.xml",
+      "as_of": "2026-12-31",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v1_0-after-2027",
+      "file": "v1_0/rut-cleaning-valid.xml",
+      "as_of": "2027-01-20",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [
+        "DECLARATIONS_IN_E_SERVICE"
+      ],
+      "note": ""
+    },
+    {
+      "id": "v6-deadline-last-day",
+      "file": "v6/rut-cleaning-valid.xml",
+      "as_of": "2027-01-31",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [
+        "DECLARATIONS_IN_E_SERVICE"
+      ],
+      "note": ""
+    },
+    {
+      "id": "v6-deadline-passed",
+      "file": "v6/rut-cleaning-valid.xml",
+      "as_of": "2027-02-01",
+      "schema": "passed",
+      "errors": [
+        "DEADLINE_PASSED"
+      ],
+      "warnings": [],
+      "notices": [
+        "DECLARATIONS_IN_E_SERVICE"
+      ],
+      "note": ""
+    },
+    {
+      "id": "v1_1-payment-on-as-of",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2026-12-14",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [
+        "V1_1_NOT_YET_USABLE"
+      ],
+      "notices": [],
+      "note": "payment date equal to the application date is allowed"
+    },
+    {
+      "id": "v1_1-payment-after-as-of",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2026-12-13",
+      "schema": "passed",
+      "errors": [
+        "PAYMENT_DATE_AFTER_SUBMISSION"
+      ],
+      "warnings": [
+        "V1_1_NOT_YET_USABLE"
+      ],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "empty",
+      "file": "invalid/empty.xml",
+      "as_of": "2027-01-12",
+      "schema": "not_run",
+      "errors": [
+        "XML_EMPTY"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "malformed",
+      "file": "invalid/malformed.xml",
+      "as_of": "2027-01-12",
+      "schema": "not_run",
+      "errors": [
+        "XML_MALFORMED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "doctype-xxe",
+      "file": "invalid/doctype-xxe.xml",
+      "as_of": "2027-01-12",
+      "schema": "not_run",
+      "errors": [
+        "XML_DOCTYPE_FORBIDDEN"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "external entity: refused before parsing"
+    },
+    {
+      "id": "billion-laughs",
+      "file": "invalid/billion-laughs.xml",
+      "as_of": "2027-01-12",
+      "schema": "not_run",
+      "errors": [
+        "XML_DOCTYPE_FORBIDDEN"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "entity expansion: refused before parsing"
+    },
+    {
+      "id": "wrong-namespace",
+      "file": "invalid/wrong-namespace.xml",
+      "as_of": "2027-01-12",
+      "schema": "not_run",
+      "errors": [
+        "VERSION_UNKNOWN"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "legacy-v4",
+      "file": "invalid/legacy-ht-begaran-4.xml",
+      "as_of": "2026-11-18",
+      "schema": "not_run",
+      "errors": [
+        "VERSION_UNSUPPORTED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "namespace pattern of an older ht/begaran version; the content is not a real V4 file"
+    },
+    {
+      "id": "missing-requested",
+      "file": "v1_1/missing-requested-amount.xml",
+      "as_of": "2027-01-12",
+      "schema": "failed",
+      "errors": [
+        "SCHEMA_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "",
+      "errors_without_schema": [
+        "STRUCTURE_REQUIRED_MISSING"
+      ]
+    },
+    {
+      "id": "invalid-amount",
+      "file": "v1_1/invalid-amount.xml",
+      "as_of": "2027-01-12",
+      "schema": "failed",
+      "errors": [
+        "SCHEMA_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "",
+      "errors_without_schema": [
+        "STRUCTURE_INVALID_VALUE"
+      ]
+    },
+    {
+      "id": "declarations-missing",
+      "file": "v1_1/declarations-missing.xml",
+      "as_of": "2027-01-12",
+      "schema": "failed",
+      "errors": [
+        "SCHEMA_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "",
+      "errors_without_schema": [
+        "STRUCTURE_REQUIRED_MISSING"
+      ]
+    },
+    {
+      "id": "schema-invalid-business-ok",
+      "file": "v1_1/schema-invalid-business-consistent.xml",
+      "as_of": "2027-01-12",
+      "schema": "failed",
+      "errors": [
+        "SCHEMA_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "name is 17 characters (max 16); every rule passes",
+      "errors_without_schema": []
+    },
+    {
+      "id": "invalid-service-code",
+      "file": "v1_1/invalid-service-code.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "SERVICE_CODE_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "BYGG is ROT; the schema accepts any string"
+    },
+    {
+      "id": "requested-exceeds-paid",
+      "file": "v1_1/requested-exceeds-paid.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "REQUESTED_EXCEEDS_PAID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "schema-valid, business-invalid"
+    },
+    {
+      "id": "combined-exceeds-labour",
+      "file": "v1_1/requested-plus-paid-exceeds-labour.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "REQUESTED_PLUS_PAID_EXCEEDS_LABOUR"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "750 + 750 > 1499"
+    },
+    {
+      "id": "combined-equals-labour",
+      "file": "v1_1/rut-cleaning-valid.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "750 + 750 = 1500: allowed (boundary)"
+    },
+    {
+      "id": "rot-exceeds-share",
+      "file": "v1_1/rot-exceeds-share.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "ROT_REQUESTED_EXCEEDS_SHARE"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "3/7 of 7000 is 3000"
+    },
+    {
+      "id": "rot-missing-property",
+      "file": "v1_1/rot-missing-property.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "ROT_PROPERTY_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "rot-apartment-incomplete",
+      "file": "v1_1/rot-apartment-incomplete.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "ROT_APARTMENT_INCOMPLETE"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "invalid-brf",
+      "file": "v1_1/invalid-brf-orgnr.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "BRF_ORGNR_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "mixed-years",
+      "file": "v1_1/mixed-payment-years.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "PAYMENT_YEAR_MIXED"
+      ],
+      "warnings": [],
+      "notices": [
+        "LIMITS_NOT_CHECKED"
+      ],
+      "note": ""
+    },
+    {
+      "id": "invalid-performer",
+      "file": "v1_1/invalid-performer.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "PERFORMER_ID_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "buyer-is-performer",
+      "file": "v1_1/buyer-is-performer.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "BUYER_IS_PERFORMER"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "buyer-check-digit",
+      "file": "v1_1/buyer-invalid-check-digit.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "BUYER_ID_INVALID"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "buyer-under-18",
+      "file": "v1_1/buyer-under-18.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "BUYER_UNDER_18"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "born 2009-01-01, payment year 2026: turns 17"
+    },
+    {
+      "id": "buyer-turns-18",
+      "file": "v1_1/buyer-turns-18-in-payment-year.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "born 2008-12-31, turns 18 on the last day of payment year 2026: allowed"
+    },
+    {
+      "id": "buyer-samordningsnummer",
+      "file": "v1_1/buyer-samordningsnummer.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "Skatteverket test samordningsnummer"
+    },
+    {
+      "id": "buyer-organisation",
+      "file": "v1_1/buyer-organisation-number.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "BUYER_NOT_A_PERSON"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "flat-rate-hours",
+      "file": "v1_1/flat-rate-with-hours.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "FLAT_RATE_HAS_HOURS_OR_COST"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "no-hours",
+      "file": "v1_1/no-hours-any-area.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "HOURS_AND_MATERIAL_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "no-hours-policy",
+      "file": "v1_1/no-hours-any-area.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "HOURS_AND_MATERIAL_REQUIRED"
+      ],
+      "warnings": [
+        "POLICY_SERVICE_WITHOUT_HOURS"
+      ],
+      "notices": [],
+      "note": "",
+      "policy": true
+    },
+    {
+      "id": "other-cost-missing",
+      "file": "v1_1/other-cost-missing.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "OTHER_COST_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "labour-missing",
+      "file": "v1_1/labour-cost-missing.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "LABOUR_COST_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "green-technology",
+      "file": "v1_1/green-technology-type.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [
+        "REQUEST_TYPE_NOT_ROT_RUT"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "property-in-rut",
+      "file": "v1_1/property-in-rut.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [
+        "PROPERTY_NOT_FOR_RUT"
+      ],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "policy-off",
+      "file": "v1_1/policy-findings.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "policy checks are opt-in: nothing reported by default"
+    },
+    {
+      "id": "policy-on",
+      "file": "v1_1/policy-findings.xml",
+      "as_of": "2027-01-12",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [
+        "POLICY_INVOICE_NUMBER_MISSING",
+        "POLICY_SERVICE_DUPLICATED"
+      ],
+      "notices": [],
+      "note": "",
+      "policy": true
+    },
+    {
+      "id": "v6-rot-missing-property",
+      "file": "v6/rot-missing-property.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [
+        "ROT_PROPERTY_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": ""
+    },
+    {
+      "id": "v6-hundred",
+      "file": "v6/hundred-buyers.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [],
+      "note": "100 cases (the maximum), one test buyer, 1 SEK each"
+    },
+    {
+      "id": "v6-101",
+      "file": "invalid/v6-101-buyers.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [
+        "CLAIMS_TOO_MANY"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "the V6 schema has no maximum; the import rule says 100"
+    },
+    {
+      "id": "v6-annual-limit",
+      "file": "v6/annual-limit-exceeded.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [
+        "ANNUAL_LIMIT_EXCEEDED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "two cases for one buyer, 80 000 SEK > 75 000 SEK in 2026"
+    },
+    {
+      "id": "v6-2025-filed-2026-01",
+      "file": "v6/payment-2025.xml",
+      "as_of": "2026-01-20",
+      "schema": "passed",
+      "errors": [],
+      "warnings": [],
+      "notices": [
+        "LIMITS_NOT_CHECKED"
+      ],
+      "note": "2025 is not a reviewed period for the amount limits"
+    },
+    {
+      "id": "v6-2025-late",
+      "file": "v6/payment-2025.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [
+        "DEADLINE_PASSED"
+      ],
+      "warnings": [],
+      "notices": [
+        "LIMITS_NOT_CHECKED"
+      ],
+      "note": ""
+    },
+    {
+      "id": "v6-no-buyers",
+      "file": "v6/no-buyers.xml",
+      "as_of": "2026-11-18",
+      "schema": "passed",
+      "errors": [
+        "CLAIMS_REQUIRED"
+      ],
+      "warnings": [],
+      "notices": [],
+      "note": "schema-valid: the V6 choice is optional; the import rule needs a buyer"
+    }
+  ]
+}

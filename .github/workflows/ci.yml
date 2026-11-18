@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly: re-downloads Skatteverket's schemas, so a changed schema
+    # (checksum mismatch) shows up as a failed run.
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.3', '8.4', '8.5']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, libxml, json, openssl
+          coverage: none
+          tools: composer:v2
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Audit dependencies
+        run: composer audit
+
+      - name: Fetch Skatteverket's schemas (sha256-checked)
+        run: php bin/rot-rut schemas:fetch --include-samples --schemas="$RUNNER_TEMP/skatteverket"
+
+      - name: Formatting
+        if: matrix.php == '8.3'
+        run: vendor/bin/pint --test
+
+      - name: Static analysis (PHPStan level 8)
+        run: vendor/bin/phpstan analyse --no-progress --memory-limit=512M
+
+      - name: Tests (no test may be skipped in CI)
+        env:
+          ROT_RUT_XML_SCHEMA_DIR: ${{ runner.temp }}/skatteverket
+        run: vendor/bin/phpunit --fail-on-skipped
+
+      - name: CLI smoke test
+        env:
+          ROT_RUT_XML_SCHEMA_DIR: ${{ runner.temp }}/skatteverket
+        run: |
+          php bin/rot-rut validate fixtures/v1_1/rut-cleaning-valid.xml --as-of=2027-01-12
+          php bin/rot-rut generate examples/rot-v6.json --version=v6 --as-of=2026-11-18 > /dev/null
+          if php bin/rot-rut validate fixtures/v1_1/requested-exceeds-paid.xml --as-of=2027-01-12; then exit 1; fi
+
+  dependency-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/dependency-review-action@bbc44d14a204704ccc493733616cd1e93a0321ec # v5.0.1

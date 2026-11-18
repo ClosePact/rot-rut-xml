@@ -1,0 +1,42 @@
+{
+    "name": "Rut oktober",
+    "type": "RUT",
+    "performer": "198001042384",
+    "cases": [
+        {
+            "invoice_number": "2026-1201",
+            "buyer": "198001022386",
+            "work": [
+                {
+                    "service": "STADNING",
+                    "hours": 4,
+                    "material_cost": 80
+                },
+                {
+                    "service": "TVATT_VID_TVATTINRATTNING"
+                }
+            ],
+            "other_cost": 240,
+            "payment_date": "2026-10-10",
+            "labour_cost": 2020,
+            "paid_amount": 1010,
+            "requested_amount": 1010
+        },
+        {
+            "invoice_number": "2026-1202",
+            "buyer": "199001012385",
+            "work": [
+                {
+                    "service": "STADNING",
+                    "hours": 3,
+                    "material_cost": 0
+                }
+            ],
+            "other_cost": 0,
+            "payment_date": "2026-10-14",
+            "labour_cost": 1500,
+            "paid_amount": 750,
+            "requested_amount": 750
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:Begaran xmlns:ns1="http://xmls.skatteverket.se/se/skatteverket/ht/begaran/4.0" xmlns:ns2="http://xmls.skatteverket.se/se/skatteverket/ht/komponent/begaran/6.0">
+  <ns2:NamnPaBegaran>Rut oktober</ns2:NamnPaBegaran>
+  <ns2:HushallBegaran>
+    <ns2:Arenden>
+      <ns2:Kopare>198001022386</ns2:Kopare>
+      <ns2:BetalningsDatum>2026-10-10</ns2:BetalningsDatum>
+      <ns2:PrisForArbete>2020</ns2:PrisForArbete>
+      <ns2:BetaltBelopp>1010</ns2:BetaltBelopp>
+      <ns2:BegartBelopp>1010</ns2:BegartBelopp>
+      <ns2:FakturaNr>2026-1201</ns2:FakturaNr>
+      <ns2:Ovrigkostnad>240</ns2:Ovrigkostnad>
+      <ns2:UtfortArbete>
+        <ns2:Stadning>
+          <ns2:AntalTimmar>4</ns2:AntalTimmar>
+          <ns2:Materialkostnad>80</ns2:Materialkostnad>
+        </ns2:Stadning>
+        <ns2:TvattVidTvattinrattning>
+          <ns2:Utfort>true</ns2:Utfort>
+        </ns2:TvattVidTvattinrattning>
+      </ns2:UtfortArbete>
+    </ns2:Arenden>
+    <ns2:Arenden>
+      <ns2:Kopare>199001012385</ns2:Kopare>
+      <ns2:BetalningsDatum>2026-10-14</ns2:BetalningsDatum>
+      <ns2:PrisForArbete>1500</ns2:PrisForArbete>
+      <ns2:BetaltBelopp>750</ns2:BetaltBelopp>
+      <ns2:BegartBelopp>750</ns2:BegartBelopp>
+      <ns2:FakturaNr>2026-1202</ns2:FakturaNr>
+      <ns2:Ovrigkostnad>0</ns2:Ovrigkostnad>
+      <ns2:UtfortArbete>
+        <ns2:Stadning>
+          <ns2:AntalTimmar>3</ns2:AntalTimmar>
+          <ns2:Materialkostnad>0</ns2:Materialkostnad>
+        </ns2:Stadning>
+      </ns2:UtfortArbete>
+    </ns2:Arenden>
+  </ns2:HushallBegaran>
+</ns1:Begaran>

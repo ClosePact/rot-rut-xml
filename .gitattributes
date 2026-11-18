@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.php diff=php
+/fixtures/** -text
+/.github export-ignore
+/tests export-ignore
+/fixtures export-ignore
+/tools export-ignore
+/phpunit.xml.dist export-ignore
+/phpstan.neon.dist export-ignore
+/pint.json export-ignore
+/.editorconfig export-ignore

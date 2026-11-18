@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:Begaran xmlns:ns1="http://xmls.skatteverket.se/se/skatteverket/ht/begaran/6.0" xmlns:ns2="http://xmls.skatteverket.se/se/skatteverket/ht/komponent/begaran/6.0">
+  <ns2:NamnPaBegaran>Rut oktober</ns2:NamnPaBegaran>
+</ns1:Begaran>

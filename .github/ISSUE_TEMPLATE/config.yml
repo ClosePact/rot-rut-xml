@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Frågor om rot, rut eller din begäran / Questions about ROT, RUT or your request
+    url: https://www.skatteverket.se/foretag/etjansterochblanketter/allaetjanster/schemalagerxml/rotochrutforetag.4.71004e4c133e23bf6db800063583.html
+    about: Det här projektet kan inte svara för Skatteverket. Frågor om en begäran ställs till Skatteverket. / This project cannot answer for Skatteverket.
+  - name: Säkerhetsproblem / Security issue
+    url: https://github.com/ClosePact/rot-rut-xml/security/advisories/new
+    about: Rapportera privat, inte som issue. / Report privately, not as an issue.
